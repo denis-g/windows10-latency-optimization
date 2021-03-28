@@ -1,0 +1,25 @@
+Windows Registry Editor Version 5.00
+
+; Windows 10 Latency Optimization
+; https://github.com/denis-g/windows10-latency-optimization/
+; Denis G. <https://github.com/denis-g>
+
+; ---
+
+; !! Вместо *** используйте свои данные для данного твика
+
+; ---
+
+; Приоритизация прерываний
+; https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/latency.md#приоритизация-прерываний
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"IRQ***Priority"=dword:00000001
+"IRQ***Priority"=dword:00000002
+
+; ---
+
+; Настройка мыши
+; https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/devices.md#настройка-мыши
+
+; Выберите в гайде своё значение масштабирования

@@ -1,0 +1,37 @@
+Windows Registry Editor Version 5.00
+
+; Windows 10 Latency Optimization
+; https://github.com/denis-g/windows10-latency-optimization/
+; Denis G. <https://github.com/denis-g>
+
+; ---
+
+; !! Вместо *** используйте свои данные для данного твика
+
+; ---
+
+; Приоритизация прерываний
+; https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/latency.md#приоритизация-прерываний
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"IRQ***Priority"=-
+"IRQ***Priority"=-
+
+; ---
+
+; Настройка мыши
+; https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/devices.md#настройка-мыши
+
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"SmoothMouseXCurve"=hex:\
+  00,00,00,00,00,00,00,00,\
+  15,6e,00,00,00,00,00,00,\
+  00,40,01,00,00,00,00,00,\
+  29,dc,03,00,00,00,00,00,\
+  00,00,28,00,00,00,00,00
+"SmoothMouseYCurve"=hex:\
+  00,00,00,00,00,00,00,00,\
+  fd,11,01,00,00,00,00,00,\
+  00,24,04,00,00,00,00,00,\
+  00,fc,12,00,00,00,00,00,\
+  00,c0,bb,01,00,00,00,00
