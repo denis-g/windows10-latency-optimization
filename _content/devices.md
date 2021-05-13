@@ -4,12 +4,12 @@
 
 ### :nut_and_bolt: Настройки устройств
 
-- [Настройка мыши](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/devices.md#настройка-мыши)
+- [Настройка мыши и клавиатуры](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/devices.md#настройка-мыши-и-клавиатуры)
 - [Настройка видеокарты](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/devices.md#настройка-видеокарты)
 
 ![](https://github.com/denis-g/windows10-latency-optimization/blob/master/images/hr.png)
 
-### Настройка мыши
+### Настройка мыши и клавиатуры
 
 > :bulb: Для дальнейшей настройки необходимо ознакомиться c
 [Работа с реестром](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/_howto-regedit.md).
@@ -313,6 +313,9 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mouclass\Parameters]
 "MouseDataQueueSize"=dword:00000014
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters]
+"KeyboardDataQueueSize"=dword:00000014
 ```
 
 <details><summary>Значения по-умолчанию:</summary>
@@ -322,11 +325,14 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mouclass\Parameters]
 "MouseDataQueueSize"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters]
+"KeyboardDataQueueSize"=-
 ```
 
 </details>
 
-Параметр `MouseDataQueueSize` задаёт количество событий мыши, которые хранятся в буфере драйвера мыши. Он также используется при вычислении размера внутреннего буфера драйвера мыши – чем меньше значение, тем быстрей новая информация будет обрабатываться. В нашем случае это оптимальные `20` событий.
+Параметры `MouseDataQueueSize` и `KeyboardDataQueueSize` задают количество событий, которые хранятся в буфере драйвера мыши и клавиатуры. Он также используется при вычислении размера внутреннего буфера драйвера – чем меньше значение, тем быстрей новая информация будет обрабатываться. В нашем случае это оптимальные `20` событий.
 
 ---
 
@@ -334,6 +340,9 @@ Windows Registry Editor Version 5.00
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mouclass\Parameters]
+"ThreadPriority"=dword:0000001f
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters]
 "ThreadPriority"=dword:0000001f
 ```
 
@@ -344,11 +353,55 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mouclass\Parameters]
 "ThreadPriority"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters]
+"ThreadPriority"=-
 ```
 
 </details>
 
-Этим параметром мы установим приоритет для нашего драйвера мыши в `Realtime` <sup>[[Процессы и потоки в Windows]](https://www.microsoftpressstore.com/articles/article.aspx?p=2233328&seqNum=7)</sup>.
+Этим параметром мы установим приоритет для наших драйверов мыши и клавиатуры в `Realtime` <sup>[[Процессы и потоки в Windows]](https://www.microsoftpressstore.com/articles/article.aspx?p=2233328&seqNum=7)</sup>.
+
+---
+
+```reg
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility]
+"StickyKeys"="506"
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility\ToggleKeys]
+"Flags"="58"
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response]
+"DelayBeforeAcceptance"="0"
+"AutoRepeatRate"="0"
+"AutoRepeatDelay"="0"
+"Flags"="122"
+```
+
+<details><summary>Значения по-умолчанию:</summary>
+
+```reg
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility]
+"StickyKeys"="510"
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility\ToggleKeys]
+"Flags"="62"
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response]
+"DelayBeforeAcceptance"="1000"
+"AutoRepeatRate"="500"
+"AutoRepeatDelay"="1000"
+"Flags"="126"
+```
+
+</details>
+
+Эти параметры отключают из категории "Специальные возможности" надоедливую функцию залипания клавиш при многократном нажатии Shift, а так же задержку при вводе символов.
+
 
 ![](https://github.com/denis-g/windows10-latency-optimization/blob/master/images/reboot.png)
 

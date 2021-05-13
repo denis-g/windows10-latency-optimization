@@ -35,7 +35,7 @@
 
 ### :nut_and_bolt: [Настройки устройств](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/devices.md#readme)
 
-- [Настройка мыши](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/devices.md#настройка-мыши)
+- [Настройка мыши и клавиатуры](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/devices.md#настройка-мыши-и-клавиатуры)
 - [Настройка видеокарты](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/devices.md#настройка-видеокарты)
 
 ### :suspect: [Настройки для игр](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/games.md#readme)
@@ -64,4 +64,4 @@
 
 ![](https://github.com/denis-g/windows10-latency-optimization/blob/master/images/hr.png)
 
-:sparkles: Если у вас есть конкретные рекомендации как улучшить или изменить данный гайд или какие-то предложения и пожелания, то можете написать обо всём в [**Обcуждениях**](https://github.com/denis-g/windows10-latency-optimization/discussions/).
+:sparkles: Если у вас есть конкретные рекомендации как улучшить или изменить данный гайд или какие-то предложения и пожелания, то можете написать обо всём в [**Обсуждениях**](https://github.com/denis-g/windows10-latency-optimization/discussions/).
