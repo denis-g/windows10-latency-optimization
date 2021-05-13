@@ -21,7 +21,6 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Microsoft\GameBar]
 "AutoGameModeEnabled"=dword:00000000
-"AllowAutoGameMode"=dword:00000000
 "UseNexusForGameBarEnabled"=dword:00000000
 "ShowStartupPanel"=dword:00000000
 "GamePanelStartupTipIndex"=dword:00000003
@@ -46,8 +45,6 @@ Windows Registry Editor Version 5.00
 Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Microsoft\GameBar]
-"AutoGameModeEnabled"=-
-"AllowAutoGameMode"=-
 "UseNexusForGameBarEnabled"=-
 "ShowStartupPanel"=-
 "GamePanelStartupTipIndex"=-
@@ -74,6 +71,10 @@ Windows Registry Editor Version 5.00
 
 ```reg
 Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\GameBar]
+"AutoGameModeEnabled"=dword:00000000
+"AllowAutoGameMode"=dword:00000000
 
 [HKEY_CURRENT_USER\System\GameConfigStore]
 "Win32_AutoGameModeDefaultProfile"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,\
@@ -111,6 +112,10 @@ Windows Registry Editor Version 5.00
 
 ```reg
 Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\GameBar]
+"AutoGameModeEnabled"=-
+"AllowAutoGameMode"=-
 
 [HKEY_CURRENT_USER\System\GameConfigStore]
 "Win32_AutoGameModeDefaultProfile"=hex:02,00,01,00,00,00,c4,20,00,00,00,00,00,\
@@ -162,7 +167,7 @@ Windows Registry Editor Version 5.00
 
 Так же положительно влияет на FPS отключение системной "оптимизации" для полноэкранного режима для конкретных игр. Windows 10 вместо честного полноэкранного режима использует свой режим наложения, благодаря которому вы можете быстрее переключаться между приложениями, получать уведомления и прочие не нужные в игре всплывающие элементы интерфейса. Всё это в итоге даёт только рост инпут-лага.
 
-![Пример настроeк Compatibility Manager](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/compatibility_01.png)
+![Пример настроек Compatibility Manager](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/compatibility_01.png)
 
 > :warning: Данная функция может быть не доступна, если включён `GameDVR`.
 
@@ -170,7 +175,7 @@ Windows Registry Editor Version 5.00
 
 Пример настроек `Compatibility Manager`:
 
-![Пример настроeк Compatibility Manager](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/compatibilitymanager_01.png)
+![Пример настроек Compatibility Manager](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/compatibilitymanager_01.png)
 
 Здесь нам необходимо выбрать (если нет в списке, то добавить) игру у которой надо отключить "оптимизацию", далее выбрать `Disable fullscreen optimizations` и нажать `Save selected to registry`.
 

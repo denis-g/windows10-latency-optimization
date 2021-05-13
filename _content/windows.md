@@ -356,7 +356,7 @@ Windows Registry Editor Version 5.00
 
 Данные настройки в основном отвечают за эффекты и функции, которые только зря используют GPU. Отключать можно по своему усмотрению, но всё же **рекомендуется** так же применить настройки.
 
-![Пример настройки кондефициальности в Win 10 Tweaker](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/visualeffects_01.png)
+![Пример настройки визуальных эффектов](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/visualeffects_01.png)
 
 ### Сервисы и службы
 
