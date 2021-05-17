@@ -43,6 +43,8 @@ nVidia Game Ready Driver 461.72
 
 #### Stats
 
+Результаты `LatencyMon` после настройки:
+
 ![Результаты LatencyMon после настройки](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/tests/after/latencymon_02.png)
 
 <details><summary>Результаты LatencyMon до настройки:</summary>
@@ -61,9 +63,11 @@ Highest measured interrupt to DPC latency (µs):       30-40 ms
 Average measured interrupt to DPC latency (µs):       0,5 ms
 ```
 
-Если ваши значения не более чем в два, то есть смысл для более детального решения проблемы – поиска проблемных устройств или драйверов (о чём будет ниже). Если же ваши значения больше на порядок, то что-то в вашей системе явно не так.
+Если ваши значения не больше чем в два раза, то есть смысл для более детального решения проблемы – поиска проблемных устройств или драйверов (о чём будет ниже). Если же ваши значения больше на несколько порядков, то что-то в вашей системе явно не так.
 
 #### Drivers
+
+Результаты `LatencyMon` после настройки:
 
 ![Результаты LatencyMon после настройки](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/tests/after/latencymon_03.png)
 
@@ -85,7 +89,7 @@ ntoskrnl.exe   NT OS Kernel – процесс ядра Windows
 nviddmkm.sys   NVIDIA Windows Kernel Mode Driver – драйверы nVidia
 ```
 
-Оптимальным результатом `Highest execution (ms)` является значение равное примерно `0,5 ms`.
+Оптимальным результатом `Highest execution (ms)` является значение *примерно* равное `0,05 ms`.
 
 Например, если большая задержка у драйвера `storport.sys`, то вполне вероятно у вас проблемы именно с жёстким диском, если большая задержка у `ntoskrnl.exe` то может быть проблема в самой Windows или её обновлениях, а `ndis.sys` может указывать на драйвер от WiFi адаптера. Конкретно в чём находится ваша проблема определить по этим данным **не предоставляется возможным**, можно лишь примерно узнать в какую сторону нужно копать.
 
@@ -93,6 +97,8 @@ nviddmkm.sys   NVIDIA Windows Kernel Mode Driver – драйверы nVidia
 ` <sup>[[скачать]](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/links.md#утилиты-используемые-в-гайде)</sup>.
 
 #### CPUs
+
+Результаты `LatencyMon` после настройки:
 
 ![Результаты LatencyMon после настройки](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/tests/after/latencymon_04.png)
 
