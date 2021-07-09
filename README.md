@@ -64,4 +64,4 @@
 
 ![](https://github.com/denis-g/windows10-latency-optimization/blob/master/images/hr.png)
 
-:sparkles: Если у вас есть конкретные рекомендации как улучшить или изменить данный гайд или какие-то предложения и пожелания, то можете написать обо всём в [**Обсуждениях**](https://github.com/denis-g/windows10-latency-optimization/discussions/).
+:sparkles: Если у вас есть конкретные рекомендации как улучшить или изменить данный гайд или какие-то предложения и пожелания, то можете написать обо всём в [**Issues**](https://github.com/denis-g/windows10-latency-optimization/issues/).

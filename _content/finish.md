@@ -84,7 +84,7 @@ Average measured interrupt to DPC latency (µs):       0,5 ms
 ```
 Wdf01000.sys   Windows Driver Framework – управляет всеми системными драйверами для устройств
 ndis.sys       Network Driver Interface Specification – управляет сетевыми устройствами
-storport.sys   Storage Port – управляет устройствами хранения (HDD, SDD)
+storport.sys   Storage Port – управляет устройствами хранения (HDD, SSD)
 ntoskrnl.exe   NT OS Kernel – процесс ядра Windows
 nviddmkm.sys   NVIDIA Windows Kernel Mode Driver – драйверы nVidia
 ```
@@ -93,8 +93,7 @@ nviddmkm.sys   NVIDIA Windows Kernel Mode Driver – драйверы nVidia
 
 Например, если большая задержка у драйвера `storport.sys`, то вполне вероятно у вас проблемы именно с жёстким диском, если большая задержка у `ntoskrnl.exe` то может быть проблема в самой Windows или её обновлениях, а `ndis.sys` может указывать на драйвер от WiFi адаптера. Конкретно в чём находится ваша проблема определить по этим данным **не предоставляется возможным**, можно лишь примерно узнать в какую сторону нужно копать.
 
-> :sparkles: Для более детального изучения проблемы можно воспользоваться утилитой `Windows Performance Analyzer
-` <sup>[[скачать]](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/links.md#утилиты-используемые-в-гайде)</sup>.
+> :sparkles: Для более детального изучения проблемы можно воспользоваться утилитой `Windows Performance Analyzer` <sup>[[скачать]](https://github.com/denis-g/windows10-latency-optimization/blob/master/_content/links.md#утилиты-используемые-в-гайде)</sup>.
 
 #### CPUs
 

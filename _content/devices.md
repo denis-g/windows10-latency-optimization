@@ -469,3 +469,5 @@ Windows Registry Editor Version 5.00
 ![Пример настройки NVIDIA Profile Inspector](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/nvidiaprofileinspector_01.png)
 
 > :bangbang: Данную настройку рекомендуется тестировать в конкретных играх, т.к. разные игры показывают как улучшения так и ухудшения фреймтайма.
+
+> :warning: Данная настройка сбрасывается на дефолтное значение после обновления драйвера nVidia!
