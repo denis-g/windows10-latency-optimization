@@ -73,7 +73,7 @@ Windows Registry Editor Version 5.00
 
 </details>
 
-Все настройки, которые находятся в этих ветках, в том числе `GPU Priority`, `Priority` и `SFIO Priority` – **не работают** на последних версиях Windows 10 <sup>[[?]](https://github.com/djdallmann/GamingPCSetup/tree/master/CONTENT/RESEARCH/WINSERVICES)</sup>.
+Задачей MMCSS (Multimedia Class Scheduler Service) это правильно распределять приоритеты CPU между мультимедиа задачами <sup>[[?]](https://docs.microsoft.com/ru-ru/windows/win32/procthread/multimedia-class-scheduler-service)</sup>. Практически все приложения на сегодняшний день используют только две задачи - `Audio` или `Pro Audio` <sup>[[?]](https://github.com/djdallmann/GamingPCSetup/tree/master/CONTENT/RESEARCH/WINSERVICES)</sup>. Остальные типы задач, особенно такая как `Games`, **не используются**.
 
 ![](https://github.com/denis-g/windows10-latency-optimization/blob/master/images/hr.png)
 
