@@ -50,7 +50,7 @@ bcdedit /set useplatformtick no > nul
 
 Пример правильного отключения таймера HPET в Windows:
 
-![Пример правильного отключения таймера HPET в Windows с помощью BCDEdit](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/bcdedit_01.png)
+![Пример правильного отключения таймера HPET в Windows с помощью BCDEdit](https://github.com/denis-g/windows10-latency-optimization/blob/master/screenshots/bcdedit_02.png)
 
 ![](https://github.com/denis-g/windows10-latency-optimization/blob/master/images/reboot.png)
 
